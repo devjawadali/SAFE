@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "SafeRide-Mobile",
+    "slug": "SafeRide-Mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow SafeRide to access your location to show nearby drivers and track your ride in real-time.",
+          "locationAlwaysAndWhenInUsePermission": "Allow SafeRide to access your location in the background to track your trip even when the app is not in use."
+        }
+      ]
+    ]
+    ,
+    "assetBundlePatterns": ["assets/**/*"],
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ec4899"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.saferide.women",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "SafeRide needs access to your microphone to make voice calls during trips.",
+        "NSLocationWhenInUseUsageDescription": "Allow SafeRide to access your location to show nearby drivers and track your ride in real-time.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow SafeRide to access your location in the background to track your trip even when the app is not in use.",
+        "NSLocationAlwaysUsageDescription": "Allow SafeRide to access your location in the background to track your trip even when the app is not in use.",
+        "UIBackgroundModes": ["audio", "voip", "location"]
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyAjfgZsb4mCvYECrp4tuyOtklbAYNKdcJM"
+      }
+    },
+    "android": {
+      "package": "com.saferide.women",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "INTERNET",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "BLUETOOTH",
+        "BLUETOOTH_CONNECT"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAjfgZsb4mCvYECrp4tuyOtklbAYNKdcJM"
+        }
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ec4899"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
